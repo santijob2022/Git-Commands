@@ -1,0 +1,81 @@
+---
+title: "Research Report: Excel"
+author: "Valentin Jimenez"
+date: "02/02/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## First Part: Analysis with Excel
+
+### Target question: **1.	How do annual members and casual riders use Cyclistic bikes differently?**
+
+## Cleaning data
+
+The databases have many blank spaces, depending of what part of the analysis we are making we will decide what to do with them; I made the cells format consistent and trimmed spaces. I added some columns to make some calculations with spreadsheets. I prepared a file called **"changesLog.txt"** which contains the changes I made, and the order in which they were executed to keep historical track.
+
+
+### Exploring datasets
+
+#### Basic analysis
+
+We begin with a very basic analysis in order to start to be familiarized with our data. This time the tool for managing spreadsheets was Excel. As an example I will show the results for the data corresponding to the month of December 2021.
+
+For this part I built some pivot tables and pivot charts:
+
+**1.** From our pie pivot chart we know that **28.17%** of riders are casual and **71.83%** of riders are member riders. We will see if the difference in percentage keeps huge for the rest of the year or if it just the case for December or some months, this will help us find which months are preferred by each type of rider.
+
+![](C:/Users\Valentín\Valasus Dropbox\Valentín Jiménez\PC\Documents\VJDS\Programming\coursera\googelDataAnalyticsCertificate\Course8\Track1_ CaseStudy1\excel\pieChartDecember2021.png)
+
+**2.** **Analysis by Rideable Type**
+
+From the following column pivot chart, where we consider the percentage of users by each type of bike; we can see the following: docked bikes, at least for December, are by far the least used type of bikes, and electric bikes are highly preferred by casual riders, even more than member riders, so this could be a potential target.
+
+![](C:/Users\Valentín\Valasus Dropbox\Valentín Jiménez\PC\Documents\VJDS\Programming\coursera\googelDataAnalyticsCertificate\Course8\Track1_ CaseStudy1\excel\pivotTablePivotBarChart.png)
+
+**3.** **Analysis by day of the week**
+
+From the column pivot chart about the days of the week used by each type of rider, we note that there is a significant difference in the quantity of casual riders on  Saturdays and Sundays.
+
+
+![](C:/Users\Valentín\Valasus Dropbox\Valentín Jiménez\PC\Documents\VJDS\Programming\coursera\googelDataAnalyticsCertificate\Course8\Track1_ CaseStudy1\excel\percentageWeekDay.png)
+
+**4. ** **Analysis by hours in a day**
+
+In this analysis the pattern for the two types of riders is pretty similar with no big differences, just note that **78.4%** of members and **76.2%** of casual riders use the service between 8 a.m. and 8 p.m. We will see if the trend is kept for the rest of the year.  
+
+![](C:/Users\Valentín\Valasus Dropbox\Valentín Jiménez\PC\Documents\VJDS\Programming\coursera\googelDataAnalyticsCertificate\Course8\Track1_ CaseStudy1\excel\byHour.png)
+
+
+**5.** **Analysis by ride duration in fractions of hour**
+
+The following tables consider the interval open on the left and closed on the right: for example 0-0.1 means the interval is greater than 0 and less or equal to 0.1. Also the first row corresponding to 0, means that the rider didn´t start the ride, for example, maybe the rider canceled the service, changed bicycle, or something else.
+
+If we calculate the ride duration and sort it in a descending order it is plain to see that only **0.14%** of the rides last longer than **1** hour. So we make our basic analysis for records less or equal to 1 hour. From the following column chart, Ride duration in fractions of hour, we see that **71.8%** of member riders prefer to use the service for rides of length less or equal to **12 minutes**, which are 0.2 of hour, while the percentage of casual members in this same range is **56.4%**.
+
+
+
+![](C:/Users\Valentín\Valasus Dropbox\Valentín Jiménez\PC\Documents\VJDS\Programming\coursera\googelDataAnalyticsCertificate\Course8\Track1_ CaseStudy1\excel\timeDurationDecember2021.png)
+
+**6.** **Location analysis**
+
+This part considers the coordinates given in the datasets, the distance is calculated considering radial distance, i.e. the distance traveled from each stations using the classical euclidean distance: the square root of the sum of the squares of the respective differences in the x and y coordinates.
+
+After an initial analysis it turned out that more than **99%** of members and more than **98%** of casual riders travel distances less than or equal to **0.1** units.
+
+So after analyzing this subset of riders I get something interesting. In every range, except for the interval 0.01-0.02, the casual riders are always a bigger number than member riders; however, for the interval 0.01-0.02 there are only **0.775%** of casual riders.
+
+![](C:/Users\Valentín\Valasus Dropbox\Valentín Jiménez\PC\Documents\VJDS\Programming\coursera\googelDataAnalyticsCertificate\Course8\Track1_ CaseStudy1\excel\travelingDistanceDecember2021.png)
+
+
+
+
+
+
+
+

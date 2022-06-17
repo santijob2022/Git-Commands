@@ -1,0 +1,49 @@
+---
+title: "Research Report"
+author: "Valentin Jimenez"
+date: "02/02/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This case study is for a fictional bike-share company called **Cyclistic**. This company launched in 2016 in Chicago, USA, and now has a fleet of 5, 824 bicycles with a network of 692 stations. The bikes can be unlocked from one station and returned to any other within the system at any time.
+
+The company offers three types of bikes: classic, docked and electric. The customers have different pricing plans: single-ride passes, full-day passes and annual memberships. The first two options make a customer a **casual rider** and the last option makes a customer a **member rider**.
+
+The company have concluded that annual members are much more profitable than casual riders, so the objective is now to find strategies to convert casual riders into annual members. Therefore, the question assigned for me to answer is the following:
+
+**How do annual members and casual riders use Cyclistic bikes differently?**
+
+The data assigned to me by the company for analysis, corresponds to each month of the year 2021 and can be found in: [link](https://divvy-tripdata.s3.amazonaws.com/index.html), the respective licence is found [here](https://ride.divvybikes.com/data-license-agreement) , which corresponds to public data.
+
+As part of the analysis, first I have included the following files:
+
+1. strategiesForDataAnalysis.docx This files contains the global strategy for making the analysis, the objective is to optimize the process through picking first the best strategy.
+
+2. changesLog.txt This file contains the historical changes made to the downloaded data so I can track easier the development of the project in case there is an error or some other modification is necessary in the future.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
